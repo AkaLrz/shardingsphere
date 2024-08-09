@@ -45,8 +45,6 @@ jobs:
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
-        if: github.repository == 'apache/shardingsphere'
         with:
           files: ./target/mergeReport/jacoco.xml
-          disable_search: true
           token: ${{ secrets.CODECOV_TOKEN }}
