@@ -92,8 +92,8 @@ echo "Start generating overall coverage reports"
 mergeReportDir="$target/mergeReport"
 # Make sure the folder is empty
 rm -rf "$mergeReportDir"/*
-# Use jacococli to generate HTML1
-java -jar $jacococli report $execMergePath --classfiles $classOutPutDir --sourcefiles $project --html $mergeReportDir
+# Use jacococli to generate HTML
+java -jar $jacococli report $execMergePath --classfiles $classOutPutDir --sourcefiles $project --html $mergeReportDir/jacocoReport
 # Use jacococli to generate XML
 java -jar $jacococli report $execMergePath --classfiles $classOutPutDir --sourcefiles $project --xml $mergeReportDir/jacoco.xml
 
